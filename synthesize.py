@@ -177,6 +177,7 @@ if __name__ == "__main__":
     file_name = args.text.replace(" ", "_")
     file_name = file_name.translate(
         str.maketrans('', '', string.punctuation.replace('_', ''))) + '.wav'
+    file_name = 'audio_output.wav'
     out_path = os.path.join(args.out_path, file_name)
     print(" > Saving output to {}".format(out_path))
     ap.save_wav(wav, out_path)
